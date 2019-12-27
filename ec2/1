@@ -1,0 +1,7 @@
+#!/usr/bin/python
+import boto3
+#session=boto3.session.Session(profile_name="vinod-tester")
+ec2_console_resource=boto3.resource(service_name="ec2",region_name="us-east-1")
+#print dir(ec2_console_resouce)
+my_instance=ec2_console_resource.Instance(id="ec2_console_resource.Instances.Id")
+print my_instance.state
