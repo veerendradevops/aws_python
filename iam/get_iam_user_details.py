@@ -3,7 +3,7 @@ import pprint
 #session=boto3.session.Session(profile_name="default")
 #re_iam=session.resource(service_name="iam",region_name="us-east-1")
 re_iam=boto3.resource(service_name="iam")
-iam_user_ob=re_iam.User("vinod_tester")
+iam_user_ob=re_iam.User("vinod-tester")
 #print(dir(iam_user_ob))
 pprint.pprint(dir(iam_user_ob))
 print "IAM Details"
