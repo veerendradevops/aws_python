@@ -5,4 +5,4 @@ iam = boto3.client('iam')
 
 
 for user_detail in iam.get_account_authorization_details():
-    print(dir(user_detail))
+    print(dir(get_account_authorization_details()))
