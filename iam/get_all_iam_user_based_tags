@@ -1,5 +1,5 @@
 import boto3
 iam = boto3.client('iam')
-responce = iam.list_users()
+responce = iam.list_users('UserName=vinod-tester')
 print(responce)
 
