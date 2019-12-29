@@ -8,4 +8,4 @@ iam_user_ob=re_iam.User("EC2_S3_IAM")
 pprint.pprint(dir(iam_user_ob))
 print "IAM Details"
 print "==========="
-print "UserName:{}"
+print "UserName:{}\nUserId:{}\nUserARN:{}\nUserCreationDate:{}".format(iam_user_ob.user_name,iam_user_ob.user_id,iam_user_ob.arn,iam_user_ob.create_date)
