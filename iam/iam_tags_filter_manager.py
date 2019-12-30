@@ -40,9 +40,8 @@ for uname in userlist:
 
                 tag_user.append(uname)
 print("tagged users list")
-print(tag_user)
-print("**********")
+print("Tagged User List:", tag_user)
 
 non_tag_user = [item for item in userlist if item not in tag_user]
 
-print(non_tag_user)
+print("Untagged User list :", non_tag_user)
