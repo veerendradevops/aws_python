@@ -39,7 +39,7 @@ for uname in userlist:
             if 'Manager' in i['Key']:
 
                 tag_user.append(uname)
-print("tagged users list")
+
 print("Tagged User List:", tag_user)
 
 non_tag_user = [item for item in userlist if item not in tag_user]
