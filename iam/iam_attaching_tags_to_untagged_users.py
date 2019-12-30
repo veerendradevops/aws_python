@@ -12,7 +12,7 @@ region = 'us-east-1'
 
 #boto3.setup_default_session(profile_name=profile, region_name=region)
 
-file_1 = 'D:\\PYTHON\\aws_python\\\iam\\test.json'
+file_1 = 'test.json'
 
 tag_user = []
 
@@ -56,7 +56,7 @@ non_tag_user = [item for item in userlist if item not in tag_user]
 
 print("Un-Tagged Users:", non_tag_user)
 
-with open('D:\\PYTHON\\aws_python\\\iam\\test.json', 'r') as content:
+with open('./test.json', 'r') as content:
 
   data = content.readlines()
 
