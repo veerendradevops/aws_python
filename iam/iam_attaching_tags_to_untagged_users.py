@@ -16,7 +16,7 @@ file_1 = 'test.json'
 
 tag_user = []
 
-non_tag_user = []
+#non_tag_user = []
 
 userlist = []
 
