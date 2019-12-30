@@ -56,7 +56,7 @@ non_tag_user = [item for item in userlist if item not in tag_user]
 
 print("Un-Tagged Users:", non_tag_user)
 
-with open('./test.json', 'r') as content:
+with open('test.json', 'r') as content:
 
   data = content.readlines()
 
