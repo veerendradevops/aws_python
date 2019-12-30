@@ -53,7 +53,7 @@ for uname in userlist:
 print("Tagged Users:", tag_user)
 
 #non_tag_user = [item for item in userlist if item not in tag_user]
-non_tag_user = list(set(user_list) - set(tag_user))
+non_tag_user = set(user_list) - set(tag_user)
 
 print("Un-Tagged Users:", non_tag_user)
 
