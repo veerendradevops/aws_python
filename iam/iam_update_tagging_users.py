@@ -2,12 +2,17 @@ import json
 import logging
 import boto3
 # Define Input Parameters and Clients
-region = 'us-east-1'
+
 tag_user = []
 non_tag_user = []
 userlist = []
 
 #Define Boto3 Clients
+profile = 'default'
+
+region = 'us-east-1'
+
+boto3.setup_default_session(profile_name=profile, region_name=region)
 iam = boto3.client('iam', region_name=region)
 
 #List Users

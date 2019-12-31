@@ -2,10 +2,10 @@ import json
 import logging
 import boto3
 
-#profile = 'mycloud'
+profile = 'default'
 region = 'us-east-1'
-#boto3.setup_default_session(profile_name=profile, region_name=region)
-file_1 = 'C:\\Users\\veerendra.toleti\\Documents\\test.json'
+boto3.setup_default_session(profile_name=profile, region_name=region)
+
 tag_user = []
 non_tag_user = []
 userlist = []
