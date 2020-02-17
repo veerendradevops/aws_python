@@ -26,8 +26,14 @@ response1 = ctrail_client.lookup_events(LookupAttributes=[
    
     
     )
-#response['Events'].append(response1)
+
+#x = {**response, **response1}
+
+#print(x)
 #print(response)
-#event['Events'][0]['Username']
-print(response['Events'][1]['Username'])
-#print(response)
+#print(response1)
+
+#z=json.load(response.read())
+#response.update(response1)
+response['Events'].append(response1)
+print(response)
