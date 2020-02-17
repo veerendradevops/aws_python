@@ -1,0 +1,15 @@
+import boto3
+
+iam_client = boto3.client('iam')
+
+
+
+response = iam_client.tag_user(
+    UserName='automate',
+    Tags=[
+        {
+            'Key': 'Manager',
+            'Value': 'Ramesh.babu@tui.co.uk'
+        },
+    ]
+)
