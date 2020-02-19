@@ -22,7 +22,7 @@ for i in events:
     for j in i['Events']:
         ename = j['EventName']
         if re.search('Create.+', ename):
-            print(ename)
+            print(j)
 
 
 
