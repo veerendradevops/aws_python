@@ -22,6 +22,11 @@ sesclient = boto3.client('ses')
 stsclient = boto3.client('sts')
 
 paginator = ctrail.get_paginator('lookup_events')
+print("Etime is + ", ETime)
+print("Stime is +", STime)
+print("starttime is +", starttime)
+print("endtime is +", endtime)
+
 
 #response = ctrail.lookup_events(StartTime=ETime , EndTime=STime)
 
