@@ -36,7 +36,7 @@ def lambda_handler(event, context):
                     else:
                         print("No tags available to copy")
                                       
-     ##################Python script without lambda ##########################3
+     ##################Python script without lambda (you should use "python3 <name>.py") ##########################
 import json
 import boto3
 
@@ -60,9 +60,13 @@ for ec2 in instances:
                                         if tag["Key"] in tags_to_be_copied] if instance.tags else[]
                     if not tags_to_copy:
                         continue
-                    #print(f"{instance.instance_id}:{instance.tags}")
+                    print(f"{instance.instance_id}:{instance.tags}")
                     for vol in instance.volumes.all():
-                        #print(f"{vol.attachments[0]['Device']}: {tags_to_copy}")
+                        print("{vol.attachments[0]['Device']}: {tags_to_copy}")
                         vol.create_tags(Tags=tags_to_copy)
             else:
                 print("No tags available to copy")
+
+
+
+                                      
