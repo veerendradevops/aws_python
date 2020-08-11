@@ -69,4 +69,36 @@ for ec2 in instances:
 
 
 
+#########################Script to apply for "application = test" only ############
+
+import json
+import boto3
+
+
+application = "guatest"
+boto3.setup_default_session(profile_name="veeren", region_name="us-east-1")
+instances = boto3.resource('ec2').instances.all()
+tags_to_be_copied = []
+
+for ec2 in instances:
+    temp = ec2.tags
+    for tag in temp:
+        print(tag)
+        if tag["Key"] == "application" and tag["Value"] == application:
+            tag_value = tag["Value"]
+            print(tag_value)
+            tags_to_be_copied = ["GSID"]
+            tags_to_copy = [tag for tag in ec2.tags
+                            if tag["Key"] in tags_to_be_copied] if ec2.tags else []
+            print("tags to copy is")
+            print(tags_to_copy)
+            print(f"{ec2.instance_id}:{ec2.tags}")
+            for vol in ec2.volumes.all():
+                vol.create_tags(Tags=tags_to_copy)
+
+        else:
+            print("No tags to available to copy")
+
+
+
                                       
